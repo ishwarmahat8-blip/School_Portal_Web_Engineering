@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #000000, #434343);
+}
+
+/* CENTER CONTAINER */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* BOX */
+.auth-box {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.auth-box h2 {
+  margin-bottom: 10px;
+}
+
+.auth-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* INPUTS */
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* BUTTON */
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-box button:hover {
+  background: #0097a7;
+}
+
+/* LINK */
+.switch {
+  margin-top: 15px;
+}
+
+.switch a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+/* PAGE BACKGROUND */
+
+
+/* CENTER THE FORM */
+.login-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 30px;
+
+  background: white;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+  text-align: center;
+}
+
+/* TITLE */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* INPUT FIELDS */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+/* INPUT FOCUS EFFECT */
+.login-container input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(0,188,212,0.5);
+}
+
+/* BUTTON */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  background: #00bcd4;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.login-container button:hover {
+  background: #0097a7;
+  transform: translateY(-2px);
+}
+
+/* TEXT BELOW */
+.login-container p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* LINK */
+.login-container a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    margin: 60px auto;
+  }
+}

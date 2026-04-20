@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+
+    
+  </div>
+
+  <!-- Navbar Loader -->
+  <script src="../js/navbar-loader.js"></script>
+  <!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<!-- Firebase Config -->
+<script src="../js/firebase.js"></script>
+  
+
+  <!-- Frontend JS -->
+ <script>
+const ADMIN_EMAIL = "admin@school.com";
+const ADMIN_PASSWORD = "admin123"; // optional extra restriction
+
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  // Block non-admin email BEFORE Firebase call
+  if (email !== ADMIN_EMAIL) {
+    alert("Access denied! Only admin can login.");
+    return;
+  }
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      if (user.email === ADMIN_EMAIL) {
+        alert("Admin login successful!");
+
+        //  Redirect to dashboard
+        window.location.href = "../dashboard/dashboard.html";
+      } else {
+        alert("Unauthorized user!");
+        firebase.auth().signOut();
+      }
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+}
+</script>
+
+</body>
+</html>

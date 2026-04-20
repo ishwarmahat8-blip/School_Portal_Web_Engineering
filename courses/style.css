@@ -1,0 +1,118 @@
+/* HERO SECTION */
+.courses-hero {
+  height: 60vh;
+  background: url("../assests/images/courses.jpg") no-repeat center/cover;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+}
+
+/* COURSES SECTION */
+.courses-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* COURSE CARD */
+.course-card {
+  width: 260px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.course-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  margin: 15px 0 5px;
+}
+
+.course-card p {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* BUTTON */
+.course-card button {
+  margin: 15px;
+  padding: 10px;
+  width: 80%;
+
+  background: #00bcd4;
+  color: white;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-card button:hover {
+  background: #0097a7;
+}
+
+/* HOVER EFFECT */
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+/* CTA */
+.courses-cta {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.btn {
+  background: #00bcd4;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #0097a7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}
