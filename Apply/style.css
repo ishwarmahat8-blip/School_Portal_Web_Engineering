@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background:url("../assests/images/hero.jpg") no-repeat center center/cover;
 }
 
 /* FORM CONTAINER */
@@ -28,8 +28,9 @@ form {
 /* HEADING */
 h2 {
   position: absolute;
-  top: 40px;
-  color: white;
+  top: 200px;
+  margin-left:60px;
+  color: rgb(1, 1, 1);
   font-size: 28px;
 }
 
